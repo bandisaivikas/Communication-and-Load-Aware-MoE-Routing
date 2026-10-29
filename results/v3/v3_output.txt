@@ -1,0 +1,79 @@
+5 GPUs (1 machines)
+  router                        travel  other machines     ppl  ppl change   load
+  top-k + aux loss               0.240            0.00   5.016      +0.00%   1.97
+  aux-free prices (DeepSeek)     0.240            0.00   5.016      +0.01%   1.32
+  node-limited (DeepSeek-V3)     0.240            0.00   5.016      +0.01%   1.32
+  ours, 20% less travel          0.197            0.00   5.005      -0.20%   1.28
+  ours, 40% less travel          0.154            0.00   5.040      +0.49%   1.24
+
+10 GPUs (2 machines)
+  router                        travel  other machines     ppl  ppl change   load
+  top-k + aux loss               0.619            0.76   5.016      +0.00%   1.97
+  aux-free prices (DeepSeek)     0.620            0.76   5.016      +0.01%   1.32
+  node-limited (DeepSeek-V3)     0.620            0.50   5.119      +2.06%   1.33
+  ours, 20% less travel          0.499            0.62   5.032      +0.32%   1.37
+  ours, 40% less travel          0.376            0.42   5.067      +1.02%   1.26
+
+15 GPUs (3 machines)
+  router                        travel  other machines     ppl  ppl change   load
+  top-k + aux loss               0.747            1.10   5.016      +0.00%   1.97
+  aux-free prices (DeepSeek)     0.747            1.11   5.016      +0.01%   1.32
+  node-limited (DeepSeek-V3)     0.746            0.67   5.148      +2.64%   1.28
+  ours, 20% less travel          0.600            0.88   5.002      -0.27%   1.32
+  ours, 40% less travel          0.451            0.60   5.110      +1.89%   1.25
+
+20 GPUs (4 machines)
+  router                        travel  other machines     ppl  ppl change   load
+  top-k + aux loss               0.812            1.33   5.016      +0.00%   1.97
+  aux-free prices (DeepSeek)     0.812            1.32   5.016      +0.01%   1.32
+  node-limited (DeepSeek-V3)     0.811            0.75   5.139      +2.46%   1.27
+  ours, 20% less travel          0.651            1.02   5.043      +0.55%   1.33
+  ours, 40% less travel          0.492            0.71   5.105      +1.78%   1.29
+
+25 GPUs (5 machines)
+  router                        travel  other machines     ppl  ppl change   load
+  top-k + aux loss               0.848            1.45   5.016      +0.00%   1.97
+  aux-free prices (DeepSeek)     0.848            1.46   5.016      +0.01%   1.32
+  node-limited (DeepSeek-V3)     0.848            0.80   5.181      +3.30%   1.28
+  ours, 20% less travel          0.682            1.13   5.032      +0.33%   1.25
+  ours, 40% less travel          0.514            0.77   5.148      +2.64%   1.32
+
+30 GPUs (6 machines)
+  router                        travel  other machines     ppl  ppl change   load
+  top-k + aux loss               0.874            1.53   5.016      +0.00%   1.97
+  aux-free prices (DeepSeek)     0.874            1.53   5.016      +0.01%   1.32
+  node-limited (DeepSeek-V3)     0.873            0.83   5.253      +4.73%   1.27
+  ours, 20% less travel          0.703            1.18   5.054      +0.78%   1.31
+  ours, 40% less travel          0.532            0.82   5.138      +2.43%   1.35
+
+35 GPUs (7 machines)
+  router                        travel  other machines     ppl  ppl change   load
+  top-k + aux loss               0.892            1.59   5.016      +0.00%   1.97
+  aux-free prices (DeepSeek)     0.893            1.59   5.016      +0.01%   1.32
+  node-limited (DeepSeek-V3)     0.893            0.86   5.281      +5.30%   1.28
+  ours, 20% less travel          0.719            1.23   5.046      +0.61%   1.35
+  ours, 40% less travel          0.542            0.85   5.128      +2.24%   1.39
+
+40 GPUs (8 machines)
+  router                        travel  other machines     ppl  ppl change   load
+  top-k + aux loss               0.905            1.64   5.016      +0.00%   1.97
+  aux-free prices (DeepSeek)     0.905            1.65   5.016      +0.01%   1.32
+  node-limited (DeepSeek-V3)     0.905            0.88   5.313      +5.94%   1.27
+  ours, 20% less travel          0.728            1.26   5.040      +0.49%   1.33
+  ours, 40% less travel          0.546            0.86   5.142      +2.52%   1.29
+
+45 GPUs (9 machines)
+  router                        travel  other machines     ppl  ppl change   load
+  top-k + aux loss               0.915            1.68   5.016      +0.00%   1.97
+  aux-free prices (DeepSeek)     0.915            1.69   5.016      +0.01%   1.32
+  node-limited (DeepSeek-V3)     0.915            0.89   5.321      +6.08%   1.26
+  ours, 20% less travel          0.736            1.29   5.058      +0.85%   1.33
+  ours, 40% less travel          0.552            0.87   5.188      +3.44%   1.35
+
+50 GPUs (10 machines)
+  router                        travel  other machines     ppl  ppl change   load
+  top-k + aux loss               0.924            1.72   5.016      +0.00%   1.97
+  aux-free prices (DeepSeek)     0.924            1.73   5.016      +0.01%   1.32
+  node-limited (DeepSeek-V3)     0.924            0.90   5.398      +7.63%   1.26
+  ours, 20% less travel          0.744            1.32   5.051      +0.70%   1.36
+  ours, 40% less travel          0.559            0.89   5.187      +3.42%   1.37

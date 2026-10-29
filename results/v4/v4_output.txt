@@ -1,0 +1,59 @@
+
+15 GPUs (3 machines)
+  router                                  travel  other machines         ppl change, 95% CI   load
+  top-k + aux loss                         0.746            1.62    +0.00% [+0.00, +0.00]   2.07   
+  aux-free prices (DeepSeek)               0.747            1.62    +0.65% [+0.30, +1.00]   1.25   worse
+  node-limited, 2 machines (DeepSeek-V3)   0.747            1.30    +0.25% [-0.18, +0.68]   1.25   can't tell from zero
+  ours, 20% less travel                    0.599            1.36    +0.75% [+0.07, +1.42]   1.24   worse
+  ours, 40% less travel                    0.451            1.02    +1.02% [+0.61, +1.43]   1.20   worse
+  ours, 60% less travel                    0.303            0.57    +2.37% [+1.66, +3.08]   1.20   worse
+
+20 GPUs (4 machines)
+  router                                  travel  other machines         ppl change, 95% CI   load
+  top-k + aux loss                         0.811            2.08    +0.00% [+0.00, +0.00]   2.07   
+  aux-free prices (DeepSeek)               0.811            2.05    +0.65% [+0.30, +1.00]   1.25   worse
+  node-limited, 2 machines (DeepSeek-V3)   0.811            1.49    +0.36% [-0.35, +1.06]   1.24   can't tell from zero
+  ours, 20% less travel                    0.652            1.67    +0.70% [+0.13, +1.26]   1.25   worse
+  ours, 40% less travel                    0.491            1.23    +0.95% [+0.63, +1.26]   1.23   worse
+  ours, 60% less travel                    0.327            0.68    +3.55% [+2.21, +4.89]   1.21   worse
+
+30 GPUs (6 machines)
+  router                                  travel  other machines         ppl change, 95% CI   load
+  top-k + aux loss                         0.873            2.60    +0.00% [+0.00, +0.00]   2.07   
+  aux-free prices (DeepSeek)               0.874            2.61    +0.65% [+0.30, +1.00]   1.25   worse
+  node-limited, 2 machines (DeepSeek-V3)   0.874            1.66    +1.02% [-0.10, +2.15]   1.23   can't tell from zero
+  ours, 20% less travel                    0.702            2.08    +0.53% [-0.08, +1.15]   1.23   can't tell from zero
+  ours, 40% less travel                    0.529            1.47    +1.16% [+0.41, +1.91]   1.22   worse
+  ours, 60% less travel                    0.357            0.81    +4.78% [+3.06, +6.50]   1.20   worse
+
+40 GPUs (8 machines)
+  router                                  travel  other machines         ppl change, 95% CI   load
+  top-k + aux loss                         0.905            2.92    +0.00% [+0.00, +0.00]   2.07   
+  aux-free prices (DeepSeek)               0.905            2.91    +0.65% [+0.30, +1.00]   1.25   worse
+  node-limited, 2 machines (DeepSeek-V3)   0.905            1.74    +0.82% [+0.29, +1.36]   1.26   worse
+  ours, 20% less travel                    0.726            2.27    +0.33% [-0.48, +1.14]   1.25   can't tell from zero
+  ours, 40% less travel                    0.547            1.57    +1.16% [+0.42, +1.90]   1.21   worse
+  ours, 60% less travel                    0.368            0.81    +5.06% [+3.80, +6.31]   1.21   worse
+
+50 GPUs (10 machines)
+  router                                  travel  other machines         ppl change, 95% CI   load
+  top-k + aux loss                         0.924            3.19    +0.00% [+0.00, +0.00]   2.07   
+  aux-free prices (DeepSeek)               0.924            3.19    +0.65% [+0.30, +1.00]   1.25   worse
+  node-limited, 2 machines (DeepSeek-V3)   0.924            1.80    +0.76% [-0.33, +1.84]   1.21   can't tell from zero
+  ours, 20% less travel                    0.742            2.47    +0.78% [-0.19, +1.75]   1.24   can't tell from zero
+  ours, 40% less travel                    0.560            1.68    +1.14% [+0.17, +2.10]   1.23   worse
+  ours, 60% less travel                    0.376            0.81    +4.72% [+3.66, +5.77]   1.18   worse
+
+Node-limited vs ours at the SAME number of other machines (positive = node-limited is worse):
+  15 GPUs: -0.56%  95% CI [-1.27, +0.15]  (5 runs)  -> no clear difference
+  20 GPUs: -0.44%  95% CI [-0.93, +0.05]  (5 runs)  -> no clear difference
+  30 GPUs: +0.06%  95% CI [-0.98, +1.09]  (5 runs)  -> no clear difference
+  40 GPUs: -0.13%  95% CI [-0.69, +0.43]  (5 runs)  -> no clear difference
+  50 GPUs: -0.32%  95% CI [-1.21, +0.57]  (5 runs)  -> no clear difference
+
+Against aux-free (our rule = aux-free + a travel price), perplexity change with 95% CI:
+  15 GPUs | node-limited, 2 machines: -0.40 [-0.89, +0.10] | ours, 20% less travel: +0.10 [-0.32, +0.52] | ours, 40% less travel: +0.37 [-0.00, +0.74] | ours, 60% less travel: +1.71 [+1.02, +2.41]
+  20 GPUs | node-limited, 2 machines: -0.29 [-1.05, +0.47] | ours, 20% less travel: +0.05 [-0.52, +0.61] | ours, 40% less travel: +0.29 [-0.14, +0.73] | ours, 60% less travel: +2.88 [+1.74, +4.02]
+  30 GPUs | node-limited, 2 machines: +0.37 [-0.46, +1.20] | ours, 20% less travel: -0.12 [-0.51, +0.28] | ours, 40% less travel: +0.51 [-0.28, +1.30] | ours, 60% less travel: +4.11 [+2.65, +5.57]
+  40 GPUs | node-limited, 2 machines: +0.17 [-0.10, +0.45] | ours, 20% less travel: -0.32 [-0.96, +0.33] | ours, 40% less travel: +0.51 [+0.05, +0.97] | ours, 60% less travel: +4.38 [+3.03, +5.73]
+  50 GPUs | node-limited, 2 machines: +0.10 [-0.74, +0.95] | ours, 20% less travel: +0.13 [-0.49, +0.75] | ours, 40% less travel: +0.48 [-0.23, +1.20] | ours, 60% less travel: +4.04 [+3.09, +4.99]
