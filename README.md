@@ -4,6 +4,8 @@ A routing rule for Mixture-of-Experts (MoE) models that takes into account **whe
 
 Status: ongoing. All experiments use a small model on a simulated cluster.
 
+**Current claim (v1):** the derived rule matches DeepSeek-V3's node-limited routing on quality at equal cross-machine traffic, and adds a travel budget that can be set to any value. It does not beat node-limited routing yet. Version 2 of the derivation aims to: it models the real step time (the slowest machine, with each machine charged once per token). See [LAB_LOG.md](LAB_LOG.md).
+
 ## The rule
 
 Each token picks the K experts with the highest
